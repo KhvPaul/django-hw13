@@ -2,6 +2,27 @@
 
 {% block content %}
     <div class="content">
+        <div style="display: flex; flex-direction: row; align-items: center">
 
+        <h1>All Quotes</h1>
+
+    </div>
+
+        {% if quote_list %}
+            <ul>
+                {% for quote in quote_list %}
+                    <li>
+                        <div class="container" style="margin: 25px">
+                            <ul>
+                                <li><a href="{{ quote.author.get_absolute_url }}">{{ quote.author }}</a></li>
+                                <li>{{ quote.text }}</li>
+                            </ul>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>There are no Quotes.</p>
+        {% endif %}
     </div>
 {% endblock %}

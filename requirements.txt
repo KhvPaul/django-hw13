@@ -1,5 +1,6 @@
 amqp==5.0.9
 asgiref==3.5.0
+beautifulsoup4==4.10.0
 billiard==3.6.4.0
 celery==5.2.3
 certifi==2021.10.8
@@ -15,6 +16,7 @@ prompt-toolkit==3.0.24
 pytz==2021.3
 requests==2.27.1
 six==1.16.0
+soupsieve==2.3.1
 sqlparse==0.4.2
 urllib3==1.26.8
 vine==5.0.0

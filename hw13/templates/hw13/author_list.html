@@ -2,6 +2,26 @@
 
 {% block content %}
     <div class="content">
-       
+        <div style="display: flex; flex-direction: row; align-items: center">
+
+        <h1>All Authors</h1>
+
+    </div>
+
+        {% if author_list %}
+            <ul>
+                {% for author in author_list %}
+                    <li>
+                        <div class="container">
+                            <a href="{{author.get_absolute_url}}">
+                                {{ author.name }} ({{ author.date_of_birth }})
+                            </a>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>There are no Quotes.</p>
+        {% endif %}
     </div>
 {% endblock %}

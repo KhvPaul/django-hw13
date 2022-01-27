@@ -2,6 +2,25 @@
 
 {% block content %}
     <div class="content">
-       
+        <h1>Author Info:</h1><br>
+        <ul>
+            <li>Author name: {{ author.name }}</li>
+            <li>Date of birth: {{ author.date_of_birth }} y.o.</li>
+            <li class="container">
+                <p>{{ author.bio }}</p>
+            </li>
+            <li>
+                <h4>
+                    Quotes:
+                    <ul>
+                        {% for quote in author.quote_set.all %}
+                            <p>{{ quote.text }}</p>
+                        {% endfor %}
+                    </ul>
+                </h4>
+            </li>
+        </ul>
     </div>
+
+
 {% endblock %}
