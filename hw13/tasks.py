@@ -51,7 +51,7 @@ def parse_new_quotes():
                         else:
                             Quote.objects.create(text=quote.find('span', {'class': 'text'}).text, author=author[0])
                         loop += 1
-                        print(f'Added new quote: {Quote.objects.last().text} - {Quote.objects.last().author}')
+                        # print(f'Added new quote: {Quote.objects.last().text} - {Quote.objects.last().author}')
                         if loop == 5:
                             break
                         page += 1 if quote == soup[-1] else 0
